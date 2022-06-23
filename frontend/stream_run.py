@@ -8,7 +8,7 @@ import requests
 import numpy as np
 from IPython.display import Image, display
 
-base_url = 'http://localhost:8000'
+base_url = 'http://0.0.0.0:8000'
 endpoint = '/predict'
 model = 'yolov3-tiny'
 

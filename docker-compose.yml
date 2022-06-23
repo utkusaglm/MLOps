@@ -1,0 +1,28 @@
+# docker-compose.yml
+
+services:
+  backend:
+    build: object-detection
+    image: object-detection-backend:latest     
+    ports:
+      - "8000:8000"
+      - "54321:54321"
+    volumes:
+      - ./object-detection:/app/object-detection
+    networks:
+      - project_network
+
+  frontend:
+    build: frontend
+    image: frontend:latest
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/app/frontend
+    # depends_on: 
+    # - backend
+    networks:
+      - project_network
+
+networks:
+  project_network:

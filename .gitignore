@@ -6,6 +6,7 @@ __pycache__/
 # C extensions
 *.so
 
+../object-detection/images_uploaded
 # Distribution / packaging
 .Python
 build/
